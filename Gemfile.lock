@@ -5,6 +5,7 @@ GIT
     carrierwave (0.5.7)
       activesupport (~> 3.0)
 
+
 GEM
   remote: http://rubygems.org/
   specs:
