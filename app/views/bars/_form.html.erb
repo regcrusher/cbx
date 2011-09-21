@@ -1,0 +1,63 @@
+<%= form_for(@bar) do |f| %>
+  <% if @bar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+
+      <ul>
+      <% @bar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :eventname %><br />
+    <%= f.text_field :eventname %>
+  </div>
+  <div class="field">
+    <%= f.label :eventdesc %><br />
+    <%= f.text_field :eventdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :imagepath %><br />
+    <%= f.file_field :imagepath %>
+  </div>
+  <div class="field">
+    <%= f.label :ticketurl %><br />
+    <%= f.text_field :ticketurl %>
+  </div>
+  <div class="field">
+    <%= f.label :TapFinderURL %><br />
+    <%= f.text_field :TapFinderURL %>
+  </div>
+  <div class="field">
+    <%= f.label :displayorder %><br />
+    <%= f.text_field :displayorder %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

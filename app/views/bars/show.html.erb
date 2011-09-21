@@ -1,0 +1,47 @@
+<section id="show" class="admin">
+		<p id="notice"><%= notice %></p>
+
+		<p>
+			<b>Name:</b>
+			<%= @bar.name %>
+		</p>
+
+		<p>
+			<b>Phone:</b>
+			<%= @bar.phone %>
+		</p>
+
+		<p>
+			<b>Address1:</b>
+			<%= @bar.address1 %>
+		</p>
+
+		<p>
+			<b>Address2:</b>
+			<%= @bar.address2 %>
+		</p>
+
+		<p>
+			<b>Url:</b>
+			<%= @bar.url %>
+		</p>
+
+		<p>
+			<b>Eventname:</b>
+			<%= @bar.eventname %>
+		</p>
+
+		<p>
+			<b>Eventdesc:</b>
+			<%= @bar.eventdesc %>
+		</p>
+
+		<p>
+			<b>Imagepath:</b>
+			<%= @bar.imagepath %>
+		</p>
+
+
+		<%= link_to 'Edit', edit_bar_path(@bar) %> |
+		<%= link_to 'Back', bars_path %>
+	</section>

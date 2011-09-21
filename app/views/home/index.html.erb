@@ -1,0 +1,212 @@
+<a name="home"></a>
+<header>
+	<img src="/img/cbx_logo.png" alt="Craft Beer Express" id="cbx_logo" />
+</header>
+
+
+
+<!-- Countdown dashboard start -->
+<div id="countdown_dashboard1">
+
+	<div class="dash days_dash">
+
+		<div class="digit">0</div>
+		<div class="digit">1</div>
+
+	</div>
+
+	<div class="dash hours_dash">
+
+		<div class="digit">1</div>
+		<div class="digit">0</div>
+
+	</div>
+
+	<div class="dash minutes_dash">
+
+		<div class="digit">0</div>
+		<div class="digit">5</div>
+
+	</div>
+
+	<div class="dash seconds_dash">
+
+		<div class="digit">5</div>
+		<div class="digit">4</div>
+
+	</div>
+
+</div>
+<!-- Countdown dashboard end -->
+
+
+
+<div class="section_top"></div>
+<section id="home">
+	<img class="header_img" src="/img/header_home.png" alt="All Aboard the Express!"/>
+	<div class="left">
+		<p class="body_copy"> 
+			The concept behind the Craft Beer Express is simple. A handful of Philly bar owners wanted to share their love of beer with people
+			who appreciate a fine brew as much as they do. What better way than a pub
+			crawl? We collaborated to create a crawl that would attract a knowledgeable
+			audience who has a passion for quality beers and in-depth tasting events.
+			<em>Just like that, the CBX was born.</em> While we’d love to have as large a
+			crowd as possible at our bars, we’d also like to make sure everyone is
+			comfortable &ndash; <strong>so ticket sales are limited.</strong> We
+			constantly add buses to the route to minimize wait times and to maximize
+			adequate seating. The CBX grows every year (two events per year), so gather
+			your friends and enjoy the finest beers Philly has to offer. Tickets are
+			available online up until the day of the event.
+		</p>
+	</div>
+	<div class="right">
+		<img src="/img/cbx_date.png" class="cbx_date" />
+	</div>
+	<div class="clear"></div>
+</section>
+<div class="section_bottom"></div>
+
+<a name="bars"></a>
+<div class="section_top"></div>
+<section id="bars">
+	<img class="header_img" src="/img/header_bars.png" alt="Participating Bars &amp; Tickets" />
+
+	<span class="orange">
+		Bus tickets are $10 each plus a small processing fee or you can avoid the fee by visiting any of the participating bars to purchase tickets.  You may start at any bar you wish - just click BUY TICKETS next to that corresponding bar’s logo below and it will take you to it's ticket link. Upon choose a starting location you will need to start at that bar on the day of the event. There will you will be able to exchange your paper ticket for your wrist bracelet so that you may ride the bus.  If you have purchased a paper ticket from any of the bars you can use that ticket to start at any location you want.  All sales are final so please be sure that the bar you choose is the one you wish to start at.
+	</span>
+
+</section>
+<div class="section_bottom_bars"></div>
+
+
+<% @bars.each do |bar| %>
+<div class="bar <% if bar == @bars.last %>last<% end %>">
+	<div class="bar_left">
+		<table>
+			<tr>
+				<td valign="top">
+					<img class="barimg" src="<%= bar.imagepath %>" alt="" height="122" width="130" />
+				</td>
+				<td valign="top">
+					<span class="bar-name"><%= bar.name %></span>
+					<br/>
+					<%= bar.address1 %>
+					<% if !bar.address2.blank? then %>
+					<br/>
+					<%= bar.address2 %>
+					<% end %>
+					<br/>
+					<%= bar.phone %>
+					<br/>
+					<a href="<%= bar.url %>" target="_blank">Visit Site</a>
+					<br/>
+					<a href="<%= bar.TapFinderURL %>" target="_blank">View Beers</a>
+
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="bar_right">	
+		<strong><%= bar.eventname %></strong>
+		<br/>
+		<%= bar.eventdesc %>
+	</div>
+</div>
+<% end %>
+
+
+<a name="map"></a>
+<div class="section_top"></div>
+<section id="map">
+
+	<img class="header_img" src="/img/header_map.png" alt="Map &amp; Location of CBX Stops" />
+	<div class="left">
+		<p class="body_copy">
+
+			The CBX is on Saturday November 12th, 2011 from 11am to 9pm and will have a series of buses running loops between the following bars (Kraftworks, Johnny Brenda's, Standard Tap, The Institute, Bishop's Collar, Kite & Key, Jose Pistolas, Sidecar, P.O.P.E, Devils Den,Brauhaus Schmitz & Race St. Cafe). The cost of the bus tickets are $10 and can be purchased above online, or in-person at any of the participating bars. The busses will run approximately every 25 minutes.
+		</p>
+
+		<table>
+			<tr><td>A</td><td>Kraftwork</td><td>G</td><td>Jose Pistolas</td></tr>
+			<tr><td>B</td><td>Johnny Brenda's</td><td>H</td><td>Sidecar</td></tr>
+			<tr><td>C</td><td>Standard Tap</td><td>I</td><td>P.O.P.E.</td></tr>
+			<tr><td>D</td><td>Institute</td><td>J</td><td>Devil's Den</td></tr>
+			<tr><td>E</td><td>Bishop's Collar</td><td>K</td><td>Brauhaus Schmitz</td></tr>
+			<tr><td>F</td><td>Kite &amp; Key</td><td>L</td><td>Race St. Cafe</td></tr>
+		</table>
+	</div>
+	<div class="right">
+		<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Kraftwork,+East+Girard+Avenue,+Philadelphia,+PA&amp;daddr=Johnny+Brenda's,+Frankford+Avenue,+Philadelphia,+PA+to:Standard+Tap,+Philadelphia,+PA+to:549+North+12th+Street,+Philadelphia,+PA+19123-3332+(The+Institute)+to:Bishop's+Collar,+Fairmount+Avenue,+Philadelphia,+PA+to:Kite+%26+Key+Tavern,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistola's+Restaurant,+South+15th+Street,+Philadelphia,+PA+to:Sidecar+Bar+and+Grille,+Christian+Street,+Philadelphia,+PA+to:1501+East+Passyunk+Avenue,+Philadelphia,+PA+19147-6322+(Pub+On+Passyunk+East)+to:Devil's+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbQ%3BFSPhYQId-4qF-yES0n_mNPsDlA%3BFevNYQIdBnKF-yHmEuP0WSatrg%3BFeHIYQIdvzCF-yHnNxhwzstW5SmJHoXS1cfGiTG4A4Sjo8LVCw%3BFVPbYQIdauSE-yHf336pgLbIIQ%3BFZO_YQIdhQCF-yGMInRr6Hk7WQ%3BFZCNYQIdLQ6F-yF-5sZei7F3EQ%3BFcN2YQIdKNqE-ylDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTFIK_XtgIPd_A%3BFVl4YQIdWzuF-yG17p0PgSoD-A%3BFYClYQIdbmeF-yE0Sh00v5SB2g&amp;sll=39.958044,-75.159187&amp;sspn=0.074343,0.143337&amp;vpsrc=0&amp;mra=ltm&amp;ie=UTF8&amp;ll=39.958044,-75.159187&amp;spn=0.04118,0.05238&amp;t=m&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=Kraftwork,+East+Girard+Avenue,+Philadelphia,+PA&amp;daddr=Johnny+Brenda's,+Frankford+Avenue,+Philadelphia,+PA+to:Standard+Tap,+Philadelphia,+PA+to:549+North+12th+Street,+Philadelphia,+PA+19123-3332+(The+Institute)+to:Bishop's+Collar,+Fairmount+Avenue,+Philadelphia,+PA+to:Kite+%26+Key+Tavern,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistola's+Restaurant,+South+15th+Street,+Philadelphia,+PA+to:Sidecar+Bar+and+Grille,+Christian+Street,+Philadelphia,+PA+to:1501+East+Passyunk+Avenue,+Philadelphia,+PA+19147-6322+(Pub+On+Passyunk+East)+to:Devil's+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbQ%3BFSPhYQId-4qF-yES0n_mNPsDlA%3BFevNYQIdBnKF-yHmEuP0WSatrg%3BFeHIYQIdvzCF-yHnNxhwzstW5SmJHoXS1cfGiTG4A4Sjo8LVCw%3BFVPbYQIdauSE-yHf336pgLbIIQ%3BFZO_YQIdhQCF-yGMInRr6Hk7WQ%3BFZCNYQIdLQ6F-yF-5sZei7F3EQ%3BFcN2YQIdKNqE-ylDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTFIK_XtgIPd_A%3BFVl4YQIdWzuF-yG17p0PgSoD-A%3BFYClYQIdbmeF-yE0Sh00v5SB2g&amp;sll=39.958044,-75.159187&amp;sspn=0.074343,0.143337&amp;vpsrc=0&amp;mra=ltm&amp;ie=UTF8&amp;ll=39.958044,-75.159187&amp;spn=0.04118,0.05238&amp;t=m" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</div>
+	<div class="clear"></div>
+</section>
+<div class="section_bottom"></div>
+<a name="contact"></a>
+<div class="section_top"></div>
+<section id="contact">
+	<img class="header_img" src="/img/header_news.png" alt="Stay on Track with the CBX!">
+
+
+
+	<div class="left">
+		<img src="/img/cbx_date.png" class="cbx_date" />
+
+
+		<table><tr><td><img src="/img/facebook.png" alt="" /></td><td>		<!-- Countdown dashboard start -->
+			<div id="countdown_dashboard2">
+
+				<div class="dash days_dash">
+
+					<div class="digit">0</div>
+					<div class="digit">1</div>
+
+				</div>
+
+				<div class="dash hours_dash">
+
+					<div class="digit">1</div>
+					<div class="digit">0</div>
+
+				</div>
+
+				<div class="dash minutes_dash">
+
+					<div class="digit">0</div>
+					<div class="digit">5</div>
+
+				</div>
+
+				<div class="dash seconds_dash">
+
+					<div class="digit">5</div>
+					<div class="digit">4</div>
+
+				</div>
+
+			</div>
+			<!-- Countdown dashboard end -->
+		</td><td><img src="/img/twitter.png" alt="" /></td></tr></table>
+
+	</div>
+	<div class="right">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<div class="fb-like-box" 
+			data-href="http://www.facebook.com/pages/Craft-Beer-Express/154719327880220" data-width="420" data-show-faces="true" data-stream="true" data-header="true">
+
+		</div>
+	</div>
+	<div class="clear"></div>
+</section>
+<div class="section_bottom"></div>
+
+
+
+

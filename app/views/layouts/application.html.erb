@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Craft Beer Express</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<script src="/js/functions.js"></script>
+	<script src="/js/modernizr-1.7.min.js"></script>
+	<script src="/js/jquery.scrollTo.js"></script>
+	<script src="/js/jquery.nav.min.js"></script>
+	<script src="/js/jquery.lwtCountdown-1.0.js"></script>
+	<link type="text/css" href="/css/normalize.css" rel="Stylesheet" />
+	<link type="text/css" href="/css/cbx.css" rel="Stylesheet" />
+
+	<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#home"><img src="/img/nav_home.png" alt="Home" /></a></li>
+			<li><a href="#bars"><img src="/img/nav_part.png" alt="Participating Bars &amp; Tickets" /></a></li>
+			<li><a href="#map"><img src="/img/nav_map.png" alt="Map" /></a></li>
+			<li><a href="#contact"><img src="/img/nav_contact.png" alt="Contact" /></a></li>
+		</ul>
+		<div id="fb_ribbon">
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/all.js#appId=120702788026282&xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like" data-href="http://www.facebook.com/pages/Craft-Beer-Express/154719327880220" data-send="false" data-layout="button_count"  data-show-faces="false" data-font="arial"></div>
+			</div>
+		</nav>
+		<div id="container">
+
+			<%= yield %>
+
+		</div>
+	</body>
+	</html>
