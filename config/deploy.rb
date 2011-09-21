@@ -1,12 +1,14 @@
+require "bundler/capistrano"
+
 set :user, 'integers'  # Your dreamhost account's username
 set :domain, 'theicecreamsocial.com'  # Dreamhost servername where your account is located 
 set :project, 'git'  # Your application as its called in the repository
-set :application, 'theicecreamsocial.com'  # Your app's location (domain or sub-domain name as setup in panel)
+set :application, 'cbx.theicecreamsocial.com'  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
 # version control config
 set :scm, 'git'
-set :repository,  "git@github.com:regcrusher.cbx.git"
+set :repository,  "git@github.com:regcrusher/cbx.git"
 set :deploy_via, :remote_cache
 set :git_enable_submodules, 1 # if you have vendored rails
 set :branch, 'master'
@@ -21,6 +23,9 @@ role :db,  domain, :primary => true
 # deploy config
 set :deploy_to, applicationdir
 set :deploy_via, :export
+set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/integers/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'" }
+
+ssh_options[:forward_agent] = true
 
 # additional settings
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
@@ -29,6 +34,12 @@ set :use_sudo, false
 desc "restart override"
 task :restart, :roles => :app do
   run "killall -9 ruby"
+end
+
+namespace :deploy do
+  task :restart do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
 end
 
 task :after_symlink do
