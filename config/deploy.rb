@@ -50,6 +50,9 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
+set(:shared_database_path) {"#{shared_path}/databases"}
+
+
 
 namespace :db do
   
@@ -73,20 +76,20 @@ namespace :db do
     desc "Migrate Production Database"
     task :migrate do
       puts "\n\n=== Migrating the Production Database! ===\n\n"
-      run "cd #{current_path}; rake db:migrate RAILS_ENV=production"
+      run "cd #{current_path}; bundle exec rake db:migrate RAILS_ENV=production"
       system "cap deploy:set_permissions"
     end
 
     desc "Resets the Production Database"
     task :migrate_reset do
       puts "\n\n=== Resetting the Production Database! ===\n\n"
-      run "cd #{current_path}; rake db:migrate:reset RAILS_ENV=production"
+      run "cd #{current_path}; bundle exec rake db:migrate:reset RAILS_ENV=production"
     end
     
     desc "Destroys Production Database"
     task :drop do
       puts "\n\n=== Destroying the Production Database! ===\n\n"
-      run "cd #{current_path}; rake db:drop RAILS_ENV=production"
+      run "cd #{current_path}; bundle exec rake db:drop RAILS_ENV=production"
       system "cap deploy:set_permissions"
     end
 
@@ -101,7 +104,7 @@ namespace :db do
     desc "Populates the Production Database"
     task :seed do
       puts "\n\n=== Populating the Production Database! ===\n\n"
-      run "cd #{current_path}; rake db:seed RAILS_ENV=production"
+      run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=production"
     end
   
   end
