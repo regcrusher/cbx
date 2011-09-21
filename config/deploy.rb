@@ -112,7 +112,7 @@ end
 
 task :after_symlink do
   %w[database.yml].each do |c|
-    run "ln -nsf #{shared_path}/system/config/#{c} #{current_path}/config/#{c}"
+    run "ln -nsf #{shared_path}/config/#{c} #{current_path}/config/#{c}"
   end
   run "ln -nsf #{shared_path}/uploads/system #{current_path}/public/system"
 end
