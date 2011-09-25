@@ -32,6 +32,8 @@ nav
 	float: right;
 	text-align: right;
 	background: url('/img/fb_ribbon.png') no-repeat;
+	position: relative;
+	top: -17px;
 }
 
 header
@@ -75,6 +77,7 @@ nav ul li a
 	-moz-transform: skew(30deg);
 	-webkit-transform: skew(30deg);
 	-ms-transform: skew(30deg);
+	line-height: 27px;
 }
 
 li.current, li:hover
@@ -85,8 +88,9 @@ li.current, li:hover
 
 img#cbx_logo 
 {
-	position:relative;
-	left:300px;
+	position: relative;
+	left: 300px;
+	z-index: 500;
 }
 
 
@@ -95,7 +99,7 @@ section
 	padding: 0 30px 10px 30px;
 	background: #465b79 url('/img/section_bg.png') repeat-y;
 	clear: both;
-
+	position: relative;
 }
 
 div.section_top
@@ -124,7 +128,7 @@ div.section_bottom_bars
 img.header_img
 {
 	position: relative;
-	left: -30px;
+	left: -35px;
 	margin-bottom: 10px;
 	display: block;
 }
@@ -202,7 +206,7 @@ img.header_img
 	float: left;
 	margin-left: 21px;
 	position: relative;
-	margin-top: 24px;
+	margin-top: 26px;
 }
 
 .dash .digit {
@@ -290,12 +294,14 @@ line-height: 1.5em;
 section#home
 {
 	padding-left: 0;
+	padding-bottom: 0
 }
 section#home .header_img
 {
-	position:relative;
-	z-index:100;
-	left: -13px;
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+	top: 5px;
 }
 
 section#home .left
@@ -304,13 +310,32 @@ section#home .left
 }
 section#home .left, section#home .right
 {
+/*
 	position:relative;
 	z-index:1;
 	top:-45px;
+*/
 }
 
 section#home .body_copy
 {
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+.bardesc_name
+{
+	display: block;
+	color: #232d38;
+	margin-bottom:5px;
+}
+
+#bar_list
+{
+	font-size: 16px;
+	margin-top:40px;
+}
+
+#bar_list
+{
 }

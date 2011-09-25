@@ -1,4 +1,4 @@
-<header>
+<header id="top">
 	<img src="/img/cbx_logo.png" alt="Craft Beer Express" id="cbx_logo" />
 </header>
 
@@ -43,6 +43,7 @@
 <div class="section_top"></div>
 <section id="home">
 	<img class="header_img" src="/img/header_home.png" alt="All Aboard the Express!"/>
+	<div style="height: 15px">&nbsp;</div>
 	<div class="left">
 		<p class="body_copy"> 
 			The concept behind the Craft Beer Express is simple. A handful of Philly bar owners wanted to share their love of beer with people
@@ -59,10 +60,13 @@
 		</p>
 	</div>
 	<div class="right">
+		<br/>
 		<img src="/img/cbx_date.png" class="cbx_date" />
 	</div>
 	<div class="clear"></div>
 </section>
+<div class="clear"></div>
+
 <div class="section_bottom"></div>
 
 <a name="bars"></a>
@@ -71,7 +75,7 @@
 	<img class="header_img" src="/img/header_bars.png" alt="Participating Bars &amp; Tickets" />
 
 	<span class="orange">
-		Bus tickets are $10 each plus a small processing fee or you can avoid the fee by visiting any of the participating bars to purchase tickets.  You may start at any bar you wish - just click BUY TICKETS next to that corresponding bar’s logo below and it will take you to it's ticket link. Upon choose a starting location you will need to start at that bar on the day of the event. There will you will be able to exchange your paper ticket for your wrist bracelet so that you may ride the bus.  If you have purchased a paper ticket from any of the bars you can use that ticket to start at any location you want.  All sales are final so please be sure that the bar you choose is the one you wish to start at.
+		Bus tickets are $10 each plus a small processing fee or you can avoid the fee by visiting any of the participating bars to purchase tickets.  You may start at any bar you wish - just click BUY TICKETS next to that corresponding bar’s logo below and it will take you to its ticket link. Upon choose a starting location you will need to start at that bar on the day of the event. There will you will be able to exchange your paper ticket for your wrist bracelet so that you may ride the bus.  If you have purchased a paper ticket from any of the bars you can use that ticket to start at any location you want.  All sales are final so please be sure that the bar you choose is the one you wish to start at.
 	</span>
 
 </section>
@@ -84,25 +88,24 @@
 		<table>
 			<tr>
 				<td valign="top" width="140">
-					<img class="barimg" src="<%= bar.imagepath %>" alt="" height="122" width="130" />
+					<img class="barimg" src="<%= bar.imagepath %>" alt="<%= bar.name %>" height="122" width="130" />
 				</td>
 				<td valign="top" width="300">
 					<span class="bar-name"><%= bar.name %></span>
 					<br/>
 					<%= bar.address1 %>
-					<% if !bar.address2.blank? then %>
-					<br/>
-					<%= bar.address2 %>
-					<% end %>
 					<br/>
 					<%= bar.phone %>
 					<br/>
 					<a href="<%= bar.url %>" target="_blank">Visit Site</a>
-
+					<br/>
 					<% if !bar.TapFinderURL.blank? then %>
 					<br/>
-					<a href="<%= bar.TapFinderURL %>" target="_blank">On Tap</a>
-					<%end%>
+					<a href="<%= bar.TapFinderURL %>"
+						target="_blank"><img valign="bottom" align="left" src="/img/tapFinder_btn.png" alt="Philly Tap Finder"/></a>
+					<% else %>
+					<br/>
+					<% end %>
 
 					<a href="<%= bar.ticketurl %>"><img valign="bottom" align="right" src="/img/buytix.png" alt="Buy Tickets"/></a>
 				</td>
@@ -110,9 +113,8 @@
 		</table>
 	</div>
 	<div class="bar_right">	
-		<strong><%= bar.eventname %></strong>
-		<br/>
-		<%= bar.eventdesc %>
+		<span class="bardesc_name"><strong><%= bar.eventname %></strong></span>
+ 		<%= bar.eventdesc %>
 	</div>
 </div>
 <% end %>
@@ -128,10 +130,10 @@
 			The CBX is on Saturday, November 12th, 2011 from 11am to 9pm and will have a series of buses running loops between the following bars (Kraftwork, Johnny Brenda's, Standard Tap, The Institute, Bishop's Collar, Kite &amp; Key, Jose Pistolas, Sidecar, P.O.P.E, Devil's Den, Brauhaus Schmitz &amp; Race St. Cafe). The cost of the bus tickets are $10 and can be purchased above online, or in-person at any of the participating bars. The busses will run approximately every 25 minutes.
 		</p>
 
-
+<div id="bar_list">
 		<table>
 			<tr>
-				<td>
+				<td width="250px">
 					<table>
 						<tr><td class="bar_letter">A</td><td class="bar_name">Kraftwork</td></tr>
 						<tr><td class="bar_letter">B</td><td class="bar_name">Johnny Brenda's</td></tr>
@@ -140,7 +142,8 @@
 						<tr><td class="bar_letter">E</td><td class="bar_name">Bishop's Collar</td></tr>
 						<tr><td class="bar_letter">F</td><td class="bar_name">Kite &amp; Key</td></tr>
 					</table></td>
-					<td><table>
+					<td width="250px">
+						<table>
 						<tr><td class="bar_letter">G</td><td class="bar_name">Jose Pistolas</td></tr>
 						<tr><td class="bar_letter">H</td><td class="bar_name">Sidecar</td></tr>
 						<tr><td class="bar_letter">I</td><td class="bar_name">P.O.P.E.</td></tr>
@@ -150,10 +153,11 @@
 					</table></td>
 				</tr>
 			</table>
-
+</div>
 
 		</div>
 		<div class="right">
+			<div style="height:13px">&nbsp;</div>
 			<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Kraftwork,+East+Girard+Avenue,+Philadelphia,+PA&amp;daddr=Johnny+Brenda's,+Frankford+Avenue,+Philadelphia,+PA+to:Standard+Tap,+Philadelphia,+PA+to:549+North+12th+Street,+Philadelphia,+PA+19123-3332+(The+Institute)+to:Bishop's+Collar,+Fairmount+Avenue,+Philadelphia,+PA+to:Kite+%26+Key+Tavern,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistola's+Restaurant,+South+15th+Street,+Philadelphia,+PA+to:Sidecar+Bar+and+Grille,+Christian+Street,+Philadelphia,+PA+to:1501+East+Passyunk+Avenue,+Philadelphia,+PA+19147-6322+(Pub+On+Passyunk+East)+to:Devil's+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbQ%3BFSPhYQId-4qF-yES0n_mNPsDlA%3BFevNYQIdBnKF-yHmEuP0WSatrg%3BFeHIYQIdvzCF-yHnNxhwzstW5SmJHoXS1cfGiTG4A4Sjo8LVCw%3BFVPbYQIdauSE-yHf336pgLbIIQ%3BFZO_YQIdhQCF-yGMInRr6Hk7WQ%3BFZCNYQIdLQ6F-yF-5sZei7F3EQ%3BFcN2YQIdKNqE-ylDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTFIK_XtgIPd_A%3BFVl4YQIdWzuF-yG17p0PgSoD-A%3BFYClYQIdbmeF-yE0Sh00v5SB2g&amp;sll=39.958044,-75.159187&amp;sspn=0.074343,0.143337&amp;vpsrc=0&amp;mra=ltm&amp;ie=UTF8&amp;ll=39.958044,-75.159187&amp;spn=0.04118,0.05238&amp;t=m&amp;output=embed"></iframe>
 		</div>
 		<div class="clear"></div>
@@ -171,7 +175,7 @@
 
 			<div class="blue_bg">
 				<p class="larger">Keep checking our website for details, and stay in the know by following the CBX on Facebook and Twitter. <br/><strong>See you on the Express!</strong></p>
-				<p>Have a specific question? Email us</p>
+				<p>Have a specific question? <a href="mailto:charlie@institutebar.com">Email us</a></p>
 			</div>
 
 

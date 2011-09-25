@@ -5,7 +5,8 @@
 $(document).ready(function (){
 
 	// your functions go here
-	$('nav ul').onePageNav();
+	$('nav ul').onePageNav({
+	});
 
 	$('#countdown_dashboard1').countDown({
 		targetDate: {
