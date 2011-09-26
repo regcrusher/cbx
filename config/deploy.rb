@@ -116,3 +116,22 @@ task :after_symlink do
   end
   run "ln -nsf #{shared_path}/uploads/system #{current_path}/public/system"
 end
+
+namespace :deploy do
+
+  after "deploy:setup", "deploy:uploads:setup"
+  after "deploy:symlink", "deploy:uploads:symlink"
+
+  namespace :uploads do
+    desc "Create the uploads dir in shared path."
+    task :setup do
+      run "cd #{shared_path}; mkdir uploads"
+    end
+
+    desc "Link pictures from shared to common."
+    task :symlink do
+      run "cd #{current_path}/public; rm -rf uploads; ln -s #{shared_path}/uploads ."
+    end
+
+  end
+end
