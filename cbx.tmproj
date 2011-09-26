@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/home/index.html.erb</string>
+	<string>config/deploy.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,19 +21,61 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/views/home/index.html.erb</key>
+		<key>Capfile</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>70</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>104</integer>
+				<integer>8</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>83</integer>
+			<integer>0</integer>
+		</dict>
+		<key>Rakefile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/controllers/bars_controller.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>52</integer>
+		</dict>
+		<key>app/models/bar.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>app/views/layouts/application.html.erb</key>
 		<dict>
@@ -49,30 +91,64 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>public/css/cbx.css</key>
+		<key>config/deploy.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>20</integer>
 				<key>line</key>
-				<integer>335</integer>
+				<integer>124</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>303</integer>
+			<integer>100</integer>
+		</dict>
+		<key>log/development.log</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>42994</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>42976</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>27</integer>
+				<key>line</key>
+				<integer>43000</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>42994</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>public/css/cbx.css</string>
-		<string>app/views/home/index.html.erb</string>
 		<string>app/views/layouts/application.html.erb</string>
+		<string>app/models/bar.rb</string>
+		<string>app/controllers/bars_controller.rb</string>
+		<string>Capfile</string>
+		<string>config/deploy.rb</string>
+		<string>Rakefile</string>
+		<string>log/development.log</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{30, 180}, {1072, 698}}</string>
+	<string>{{135, 180}, {1072, 698}}</string>
 </dict>
 </plist>
