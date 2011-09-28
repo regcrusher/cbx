@@ -1,9 +1,9 @@
 require "bundler/capistrano"
 
-set :user, 'integers'  # Your dreamhost account's username
-set :domain, 'theicecreamsocial.com'  # Dreamhost servername where your account is located 
+set :user, 'craftbeerexpress'  # Your dreamhost account's username
+set :domain, 'craftbeerexpress.com'  # Dreamhost servername where your account is located 
 set :project, 'git'  # Your application as its called in the repository
-set :application, 'cbx.theicecreamsocial.com'  # Your app's location (domain or sub-domain name as setup in panel)
+set :application, 'craftbeerexpress.com'  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
 # version control config
@@ -23,7 +23,7 @@ role :db,  domain, :primary => true
 # deploy config
 set :deploy_to, applicationdir
 set :deploy_via, :export
-set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/integers/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'" }
+set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/craftbeerexpress/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'" }
 
 ssh_options[:forward_agent] = true
 
