@@ -10,7 +10,7 @@ $(document).ready(function (){
 
 	$('#countdown_dashboard1').countDown({
 		targetDate: {
-			'day': 		18,
+			'day': 		12,
 			'month': 	11,
 			'year': 	2011,
 			'hour': 	11,
@@ -23,7 +23,7 @@ $(document).ready(function (){
 
 	$('#countdown_dashboard2').countDown({
 		targetDate: {
-			'day': 		18,
+			'day': 		12,
 			'month': 	11,
 			'year': 	2011,
 			'hour': 	11,

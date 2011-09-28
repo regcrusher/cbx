@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/home/index.html.erb</string>
+	<string>Gemfile</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -29,6 +29,20 @@
 				<integer>0</integer>
 				<key>line</key>
 				<integer>8</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Gemfile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -89,7 +103,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>155</integer>
+			<integer>16</integer>
 		</dict>
 		<key>app/views/layouts/application.html.erb</key>
 		<dict>
@@ -168,6 +182,7 @@
 	<array>
 		<string>app/views/layouts/application.html.erb</string>
 		<string>app/views/home/index.html.erb</string>
+		<string>Gemfile</string>
 		<string>public/css/cbx.css</string>
 		<string>app/models/bar.rb</string>
 		<string>app/controllers/bars_controller.rb</string>
@@ -179,6 +194,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{119, 180}, {1072, 698}}</string>
+	<string>{{249, 180}, {1072, 698}}</string>
 </dict>
 </plist>
