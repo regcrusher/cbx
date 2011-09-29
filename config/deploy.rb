@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 
 set :user, 'craftbeerexpress'  # Your dreamhost account's username
-set :domain, 'craftbeerexpress.com'  # Dreamhost servername where your account is located 
+set :domain, '64.90.49.47'  # Dreamhost servername where your account is located 
 set :project, 'git'  # Your application as its called in the repository
 set :application, 'craftbeerexpress.com'  # Your app's location (domain or sub-domain name as setup in panel)
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
