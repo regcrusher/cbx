@@ -17,7 +17,8 @@ $(document).ready(function (){
 			'min': 		0,
 			'sec': 		0
 		},
-		omitWeeks: true
+		omitWeeks: true,
+		onComplete: function(){ $('#countdown_dashboard1').hide(0); }
 
 	});
 
@@ -30,7 +31,9 @@ $(document).ready(function (){
 			'min': 		0,
 			'sec': 		0
 		},
-		omitWeeks: true
+		omitWeeks: true,
+		onComplete: function(){ $('#countdown_dashboard2').hide(0); }
+		
 
 	});
 
