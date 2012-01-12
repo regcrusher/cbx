@@ -10,9 +10,9 @@ $(document).ready(function (){
 
 	$('#countdown_dashboard1').countDown({
 		targetDate: {
-			'day': 		12,
-			'month': 	11,
-			'year': 	2011,
+			'day': 		10,
+			'month': 	3,
+			'year': 	2012,
 			'hour': 	11,
 			'min': 		0,
 			'sec': 		0
@@ -24,9 +24,9 @@ $(document).ready(function (){
 
 	$('#countdown_dashboard2').countDown({
 		targetDate: {
-			'day': 		12,
-			'month': 	11,
-			'year': 	2011,
+			'day': 		10,
+			'month': 	3,
+			'year': 	2012,
 			'hour': 	11,
 			'min': 		0,
 			'sec': 		0
