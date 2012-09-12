@@ -8,12 +8,19 @@ $(document).ready(function (){
 	$('nav ul').onePageNav({
 	});
 
+	var day, month, year;
+	day = 10;
+	month = 11;
+	year = 2012;
+	hour = 11;
+	
+
 	$('#countdown_dashboard1').countDown({
 		targetDate: {
-			'day': 		10,
-			'month': 	3,
-			'year': 	2012,
-			'hour': 	11,
+			'day': 		day,
+			'month': 	month,
+			'year': 	year,
+			'hour': 	hour,
 			'min': 		0,
 			'sec': 		0
 		},
@@ -24,10 +31,10 @@ $(document).ready(function (){
 
 	$('#countdown_dashboard2').countDown({
 		targetDate: {
-			'day': 		10,
-			'month': 	3,
-			'year': 	2012,
-			'hour': 	11,
+				'day': 		day,
+				'month': 	month,
+				'year': 	year,
+				'hour': 	hour,
 			'min': 		0,
 			'sec': 		0
 		},
