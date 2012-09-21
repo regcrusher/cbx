@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/home/index.html.erb</string>
+	<string>public/js/functions.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,39 +21,24 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/views/home/index.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>129</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>102</integer>
-		</dict>
 		<key>public/js/functions.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>32</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1</integer>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>public/js/functions.js</string>
-		<string>app/views/home/index.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
