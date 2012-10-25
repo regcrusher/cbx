@@ -27,6 +27,8 @@ set :default_environment, { 'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home
 
 ssh_options[:forward_agent] = true
 
+#Ignore SSH key mismatches.
+ssh_options[:paranoid] = false
 
 
 symlink_configuration = [
