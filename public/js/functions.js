@@ -9,11 +9,11 @@ $(document).ready(function (){
 	});
 
 	var day, month, year;
-	day = 10;
-	month = 11;
-	year = 2012;
+	day = 9;
+	month = 3;
+	year = 2013;
 	hour = 11;
-	
+
 
 	$('#countdown_dashboard1').countDown({
 		targetDate: {
