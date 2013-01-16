@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/home/index.html.erb</string>
+	<string>config/deploy.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,35 +21,75 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Capfile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/views/bars/_form.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>38</integer>
+				<key>line</key>
+				<integer>50</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>25</integer>
+		</dict>
+		<key>app/views/bars/edit.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/views/home/index.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>62</integer>
+				<integer>11</integer>
 				<key>line</key>
-				<integer>129</integer>
+				<integer>116</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>96</integer>
-			<key>selectFrom</key>
+			<integer>101</integer>
+		</dict>
+		<key>config/deploy.rb</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>59</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>129</integer>
+				<integer>12</integer>
 			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>62</integer>
-				<key>line</key>
-				<integer>129</integer>
-			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>public/js/functions.js</key>
 		<dict>
@@ -70,6 +110,10 @@
 	<array>
 		<string>public/js/functions.js</string>
 		<string>app/views/home/index.html.erb</string>
+		<string>app/views/bars/edit.html.erb</string>
+		<string>app/views/bars/_form.html.erb</string>
+		<string>Capfile</string>
+		<string>config/deploy.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
