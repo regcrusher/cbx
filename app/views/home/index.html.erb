@@ -50,7 +50,7 @@
 			who appreciate a fine brew as much as they do. What better way than a pub
 			crawl? We collaborated to create a crawl that would attract a knowledgeable
 			audience who has a passion for quality beers and in-depth tasting events.
-			<em>Just like that, the CBX was born.</em> While we’d love to have as large a
+			<em>Just like that, the CBX was born.</em> While we'd love to have as large a
 			crowd as possible at our bars, we’d also like to make sure everyone is
 			comfortable &ndash; <strong>so ticket sales are limited.</strong> We
 			constantly add buses to the route to minimize wait times and to maximize
@@ -81,7 +81,6 @@
 </section>
 <div class="section_bottom_bars"></div>
 
-
 <% @bars.each do |bar| %>
 <div class="bar <% if bar == @bars.last %>last<% end %>">
 	<div class="bar_left">
@@ -101,22 +100,20 @@
 					<br/>
 					<% if !bar.TapFinderURL.blank? then %>
 					<br/>
-					<a href="<%= bar.TapFinderURL %>"
-						target="_blank"><img valign="bottom" align="left" src="/img/tapfinder_btn.png" alt="Philly Tap Finder"/></a>
-						<% else %>
-						<br/>
-						<% end %>
-
-						<a href="<%= bar.ticketurl %>"><img valign="bottom" align="right" src="/img/buytix.png" alt="Buy Tickets"/></a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="bar_right">	
-			<span class="bardesc_name"><strong><%= bar.eventname %></strong></span>
-			<%= raw bar.eventdesc %>
-		</div>
+					<a href="<%= bar.TapFinderURL %>" target="_blank"><img valign="bottom" align="left" src="/img/tapfinder_btn.png" alt="Philly Tap Finder"/></a>
+					<% else %>
+					<br/>
+					<% end %>
+					<a href="<%= bar.ticketurl %>"><img valign="bottom" align="right" src="/img/buytix.png" alt="Buy Tickets"/></a>
+				</td>
+			</tr>
+		</table>
 	</div>
+	<div class="bar_right">	
+		<span class="bardesc_name"><strong><%= bar.eventname %></strong></span>
+		<%= raw bar.eventdesc %>
+	</div>
+</div>
 	<% end %>
 
 
@@ -128,13 +125,14 @@
 		<div class="left">
 			<p class="body_copy">
 				The CBX is on Saturday, March 9, 2013 from 11am to 
-				 and will have a series of buses running loops between the following bars (Kraftwork, Johnny Brenda's, Standard Tap, The Institute, Bishop's Collar, Kite &amp; Key, Jose Pistolas, Sidecar, P.O.P.E, Devil's Den, Brauhaus Schmitz &amp; Race St. Cafe). The cost of the bus tickets are $10 and can be purchased above online, or in-person at any of the participating bars. The busses will run approximately every 25 minutes.
+				 and will have a series of buses running loops between the following bars (Kraftwork, Johnny Brenda's, The Institute, Bishop's Collar, Kite &amp; Key, Jose Pistolas, Sidecar, P.O.P.E, Devil's Den, Brauhaus Schmitz &amp; Race St. Cafe). The cost of the bus tickets are $10 and can be purchased above online, or in-person at any of the participating bars. The busses will run approximately every 25 minutes.
 			</p>
 
 			<div id="bar_list">
 				<table>
 					<tr>
-						<td width="250px">
+						<!-- STANDARD TAP COMMENTED OUT -->
+						<!--<td width="250px">
 							<table>
 								<tr><td class="bar_letter">A</td><td class="bar_name">Kraftwork</td></tr>
 								<tr><td class="bar_letter">B</td><td class="bar_name">Johnny Brenda's</td></tr>
@@ -142,7 +140,8 @@
 								<tr><td class="bar_letter">D</td><td class="bar_name">Institute</td></tr>
 								<tr><td class="bar_letter">E</td><td class="bar_name">Bishop's Collar</td></tr>
 								<tr><td class="bar_letter">F</td><td class="bar_name">Kite &amp; Key</td></tr>
-							</table></td>
+							</table>
+						</td>
 							<td width="250px">
 								<table>
 									<tr><td class="bar_letter">G</td><td class="bar_name">Jose Pistolas</td></tr>
@@ -151,17 +150,43 @@
 									<tr><td class="bar_letter">J</td><td class="bar_name">Devil's Den</td></tr>
 									<tr><td class="bar_letter">K</td><td class="bar_name">Brauhaus Schmitz</td></tr>
 									<tr><td class="bar_letter">L</td><td class="bar_name">Race St. Cafe</td></tr>
-								</table></td>
-							</tr>
+								</table>
+							</td>-->
+
+							<td width="250px" valign="top">
+							<table>
+								<tr><td class="bar_letter">A</td><td class="bar_name">Kraftwork</td></tr>
+								<tr><td class="bar_letter">B</td><td class="bar_name">Johnny Brenda's</td></tr>
+								<tr><td class="bar_letter">C</td><td class="bar_name">The Institute</td></tr>
+								<tr><td class="bar_letter">D</td><td class="bar_name">Bishop's Collar</td></tr>
+								<tr><td class="bar_letter">E</td><td class="bar_name">Kite &amp; Key</td></tr>
+								<tr><td class="bar_letter">F</td><td class="bar_name">Jose Pistolas</td></tr>
+							</table>
+						</td>
+							<td width="250px"  valign="top">
+								<table>
+									<tr><td class="bar_letter">G</td><td class="bar_name">Sidecar</td></tr>
+									<tr><td class="bar_letter">H</td><td class="bar_name">P.O.P.E.</td></tr>
+									<tr><td class="bar_letter">I</td><td class="bar_name">Devil's Den</td></tr>
+									<tr><td class="bar_letter">J</td><td class="bar_name">Brauhaus Schmitz</td></tr>
+									<tr><td class="bar_letter">K</td><td class="bar_name">Race St. Cafe</td></tr>
+								</table>
+							</td>
+						</tr>
 						</table>
 					</div>
 
 				</div>
 				<div class="right">
 					<div style="height:13px">&nbsp;</div>
-					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Kraftwork,+East+Girard+Avenue,+Philadelphia,+PA&amp;daddr=Johnny+Brendas,+Frankford+Avenue,+Philadelphia,+PA+to:Standard+Tap,+Philadelphia,+PA+to:549+North+12th+Street,+Philadelphia,+PA+19123-3332+(The+Institute)+to:Bishops+Collar,+Fairmount+Avenue,+Philadelphia,+PA+to:Kite+%26+Key+Tavern,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistolas+Restaurant,+South+15th+Street,+Philadelphia,+PA+to:Sidecar+Bar+and+Grille,+Christian+Street,+Philadelphia,+PA+to:1501+East+Passyunk+Avenue,+Philadelphia,+PA+19147-6322+(Pub+On+Passyunk+East)+to:Devils+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbQ%3BFSPhYQId-4qF-yES0n_mNPsDlA%3BFevNYQIdBnKF-yHmEuP0WSatrg%3BFeHIYQIdvzCF-yHnNxhwzstW5SmJHoXS1cfGiTG4A4Sjo8LVCw%3BFVPbYQIdauSE-yHf336pgLbIIQ%3BFZO_YQIdhQCF-yGMInRr6Hk7WQ%3BFZCNYQIdLQ6F-yF-5sZei7F3EQ%3BFcN2YQIdKNqE-ylDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTFIK_XtgIPd_A%3BFVl4YQIdWzuF-yG17p0PgSoD-A%3BFYClYQIdbmeF-yE0Sh00v5SB2g&amp;sll=39.958044,-75.159187&amp;sspn=0.074343,0.143337&amp;vpsrc=0&amp;mra=ltm&amp;ie=UTF8&amp;ll=39.958044,-75.159187&amp;spn=0.04118,0.05238&amp;t=m&amp;output=embed"></iframe>Î
+					<!-- STANDARD TAP COMMENTED OUT -->
+					<!--<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Kraftwork,+East+Girard+Avenue,+Philadelphia,+PA&amp;daddr=Johnny+Brendas,+Frankford+Avenue,+Philadelphia,+PA+to:Standard+Tap,+Philadelphia,+PA+to:549+North+12th+Street,+Philadelphia,+PA+19123-3332+(The+Institute)+to:Bishops+Collar,+Fairmount+Avenue,+Philadelphia,+PA+to:Kite+%26+Key+Tavern,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistolas+Restaurant,+South+15th+Street,+Philadelphia,+PA+to:Sidecar+Bar+and+Grille,+Christian+Street,+Philadelphia,+PA+to:1501+East+Passyunk+Avenue,+Philadelphia,+PA+19147-6322+(Pub+On+Passyunk+East)+to:Devils+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbQ%3BFSPhYQId-4qF-yES0n_mNPsDlA%3BFevNYQIdBnKF-yHmEuP0WSatrg%3BFeHIYQIdvzCF-yHnNxhwzstW5SmJHoXS1cfGiTG4A4Sjo8LVCw%3BFVPbYQIdauSE-yHf336pgLbIIQ%3BFZO_YQIdhQCF-yGMInRr6Hk7WQ%3BFZCNYQIdLQ6F-yF-5sZei7F3EQ%3BFcN2YQIdKNqE-ylDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTFIK_XtgIPd_A%3BFVl4YQIdWzuF-yG17p0PgSoD-A%3BFYClYQIdbmeF-yE0Sh00v5SB2g&amp;sll=39.958044,-75.159187&amp;sspn=0.074343,0.143337&amp;vpsrc=0&amp;mra=ltm&amp;ie=UTF8&amp;ll=39.958044,-75.159187&amp;spn=0.04118,0.05238&amp;t=m&amp;output=embed"></iframe>-->
+					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=Kraftwork,+541+E+Girard+Ave,+Philadelphia,+PA&amp;daddr=Johnny+Brenda's,+Frankford+Avenue,+Philadelphia,+PA+to:The+Institute+Bar,+549+N+12th+St,+Philadelphia,+PA+to:Bishop's+Collar,+2349+Fairmount+Ave,+Philadelphia,+PA+to:Kite+%26+Key,+Callowhill+Street,+Philadelphia,+PA+to:Jose+Pistola's,+South+15th+Street,+Philadelphia,+PA+to:The+Sidecar+Bar+%26+Grille,+Christian+Street,+Philadelphia,+PA+to:The+Pub+on+Passyunk+East,+East+Passyunk+Avenue,+Philadelphia,+PA+to:Devil's+Den,+South+11th+Street,+Philadelphia,+PA+to:Brauhaus+Schmitz,+South+Street,+Philadelphia,+PA+to:Race+Street+Cafe,+Race+Street,+Philadelphia,+PA&amp;hl=en&amp;geocode=Fb3qYQIdyaWF-yFFiy_KbvizbSllaGIaQcjGiTFFiy_KbvizbQ%3BFSzhYQId9oqF-yES0n_mNPsDlClL3KCNe8bGiTES0n_mNPsDlA%3BFezIYQIdZTCF-yFzMUsj8pdpcSmJHoXS1cfGiTFzMUsj8pdpcQ%3BFfPaYQIdaOSE-yHf336pgLbIISkH2cjDycfGiTHf336pgLbIIQ%3BFZO_YQIdhQCF-yF8aoXlzA0ksSmxZZ3RzMfGiTF8aoXlzA0ksQ%3BFbyNYQIdbQ2F-yF-5sZei7F3ESlJE1vNOsbGiTF-5sZei7F3EQ%3BFcJ2YQId-dmE-yFjGAfzu43nfClDgc0iQMbGiTFjGAfzu43nfA%3BFeNLYQIdAR6F-yFIoTnoaN7tICn7rZ0NG8bGiTFIoTnoaN7tIA%3BFUNfYQIdMB6F-yGhomrJVaH-Hykl2tkZGcbGiTGhomrJVaH-Hw%3BFYJ4YQIdZDuF-yG17p0PgSoD-Cl1pJunIMbGiTG17p0PgSoD-A%3BFVylYQIdZmeF-yE0Sh00v5SB2iknuRgshsjGiTE0Sh00v5SB2g&amp;aq=0&amp;oq=Johnny+Brenda'&amp;sll=39.950806,-75.153351&amp;sspn=0.074483,0.151577&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+
+
 				</div>
 				<div class="clear"></div>
+		
 			</section>
 			<div class="section_bottom"></div>
 			<a name="contact"></a>
@@ -225,17 +250,16 @@
 					<a href="http://www.phillytapfinder.com"><img src="/img/PTF_logo.png" alt="Philly Tap Finder"></a>
 				</div>
 				<div class="right" style="text-align: right; padding-right:10px; width: 450px">
-					<div id="fb-root" style="text-align:right"></div>
+					<!--<div id="fb-root" style="text-align:right"></div>
 					<script>(function(d, s, id) {
 						var js, fjs = d.getElementsByTagName(s)[0];
 						if (d.getElementById(id)) {return;}
 						js = d.createElement(s); js.id = id;
 						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 						fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
+						}(document, 'script', 'facebook-jssdk'));</script>-->
 
-						<div class="fb-like-box" 
-						data-href="http://www.facebook.com/pages/Craft-Beer-Express/154719327880220" data-width="430" data-height="640" data-show-faces="true" data-stream="true" data-header="true">
+						<div class="fb-like-box" data-href="http://www.facebook.com/pages/Craft-Beer-Express/154719327880220" data-width="430" data-height="640" data-show-faces="true" data-stream="true" data-header="true">
 
 					</div>
 				</div>
